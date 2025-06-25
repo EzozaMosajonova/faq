@@ -1,0 +1,144 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(135deg, #a163ff, #5f57ea);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.faq-container {
+  background: #fff;
+  border-radius: 20px;
+  display: flex;
+  max-width: 920px;
+  width: 90%;
+  overflow: visible;
+  position: relative;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+  padding: 30px;
+}
+
+.faq-left {
+  flex: 1;
+  position: relative;
+  margin-left: -150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.faq-left img {
+  width: 100%;
+  max-width: 450px;
+  height: auto;
+}
+
+.faq-right {
+  flex: 1;
+  padding-left: 30px;
+}
+
+.faq-right h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  color: #111;
+}
+
+.faq-item {
+  border-top: 1px solid #ddd;
+  padding: 15px 0;
+}
+
+.faq-question {
+  cursor: pointer;
+  font-weight: 500;
+  position: relative;
+  padding-right: 20px;
+}
+
+.faq-question::after {
+  content: "▾";
+  position: absolute;
+  right: 0;
+  color: #f47c57;
+  transition: transform 0.3s ease;
+}
+
+.faq-item.active .faq-question {
+  font-weight: bold;
+}
+
+.faq-item.active .faq-question::after {
+  transform: rotate(180deg);
+}
+
+.faq-answer {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+  display: none;
+}
+
+.faq-item.active .faq-answer {
+  display: block;
+}
+
+@media (max-width: 768px) {
+  .faq-container {
+    margin-top: 170px;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .faq-left {
+    margin-left: 0;
+    margin-top: -170px;
+    margin-bottom: -0px;
+    justify-content: center;
+  }
+
+  .faq-left img {
+    max-width: 390px;
+  }
+
+  .faq-right {
+    padding: 30px 20px;
+    border-radius: 25px;
+    width: 100%;
+    position: relative;
+    z-index: 1;
+  }
+
+  .faq-right h2 {
+    text-align: center;
+  }
+}
+
+@media (max-width: 500px) {
+  .faq-container {
+    margin-top: 130px;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    width: 80%;
+    margin-bottom: 20px;
+  }
+
+  .faq-left {
+    margin-left: 0;
+    margin-top: -135px;
+    margin-bottom: -0px;
+    justify-content: center;
+  }
+
+  .faq-left img {
+    max-width: 270px;
+  }
+}
